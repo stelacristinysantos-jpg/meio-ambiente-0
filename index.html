@@ -2,41 +2,219 @@
 
 
 <!DOCTYPE html>
-
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Jardinagem Romântica - O Jardim Secreto</title>
     <style>
-    header{ 
-      background-color:#e0c9c9;
-      color:#000000;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
-   
-   }
-    main {
-      background-color:#e0c9c9;
-      color:#000000
-   }
+        /* Configurações Globais com paleta suave e romântica */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            font-family: 'Georgia', serif;
+            color: #4a3b32;
+            /* Fundo rosa suave mesclado com branco (Gradiente sutil) */
+            background: radial-gradient(circle, #fff6f8 0%, #fdecef 50%, #fae1e6 100%);
+            background-attachment: fixed;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
 
+        /* Container do Blog com Detalhes Rococó e Moldura de Renda */
+        .blog-container {
+            max-width: 800px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            padding: 40px;
+            position: relative;
+            
+            /* Bordas Duplas Finas estilo Rococó Dourado Clássico */
+            border: 3px double #d4af37;
+            box-shadow: 0 10px 30px rgba(170, 108, 121, 0.15), 
+                        inset 0 0 20px rgba(212, 175, 55, 0.1);
+        }
+
+        /* Efeito de Detalhe de Renda Branca nas Bordas Superiores e Inferiores */
+        .blog-container::before, .blog-container::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 12px;
+            /* Padrão CSS para simular babado/renda furadinha */
+            background-image: radial-gradient(circle at 6px 12px, transparent 6px, #ffffff 6px), 
+                              radial-gradient(circle at 6px 0px, #ffffff 6px, transparent 6px);
+            background-size: 12px 12px;
+            background-repeat: repeat-x;
+        }
+        .blog-container::before {
+            top: -12px;
+        }
+        .blog-container::after {
+            bottom: -12px;
+            transform: rotate(180deg);
+        }
+
+        /* Elementos Visuais Rococó (Arabescos/Scrolls) */
+        .rococo-ornament {
+            text-align: center;
+            font-size: 24px;
+            color: #c99a63;
+            margin: 10px 0;
+            user-select: none;
+        }
+
+        /* Cabeçalho do Blog */
+        .blog-header {
+            text-align: center;
+            border-bottom: 2px dashed #e8c5c8;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .blog-title {
+            font-size: 32px;
+            color: #aa6c79;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 10px 0;
+            font-weight: normal;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .blog-subtitle {
+            font-style: italic;
+            color: #8c766c;
+            font-size: 14px;
+        }
+
+        /* Conteúdo do Texto */
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+            text-indent: 2em;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #925462;
+            margin: 35px 0 20px 0;
+            padding-left: 12px;
+            border-left: 4px solid #d4af37;
+        }
+
+        /* Caixas de Passos (Cards Estilo Blog Elegante) */
+        .step-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #f0d5da;
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(229, 179, 190, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-3px);
+            border-color: #e5b3be;
+        }
+
+        .step-badge {
+            display: inline-block;
+            background-color: #e5b3be;
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .step-title {
+            font-size: 18px;
+            color: #7a434e;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Separador de Renda entre seções */
+        .lace-separator {
+            height: 10px;
+            background-image: radial-gradient(circle at 5px 10px, transparent 5px, rgba(229, 179, 190, 0.3) 5px);
+            background-size: 10px 10px;
+            margin: 30px 0;
+        }
+
+        /* Rodapé */
+        .blog-footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e8c5c8;
+            font-size: 13px;
+            color: #a38f85;
+            font-style: italic;
+        }
     </style>
-  </head>
-  <body>
-      <header>
-         <h1>meu blog</h1>
-         <P>dareidicassobremeioambiente</P>  
-      </header>
-      <main>
-          <h2>Meu primeiro post</h2>
-          <p>Por:Stela Cristiny</p>
-          <p>Bem-vindos ao meu novo blog! Aqui vou 
-           compartilhar dicas e curiosidades
-           sobre meio ambiente. </p>
-      </main>
-   </body>
+</head>
+<body>
+
+    <div class="blog-container">
+        <div class="blog-header">
+            <div class="rococo-ornament">❧ ⚜ ❧</div>
+            <h1 class="blog-title">O Jardim Secreto</h1>
+            <div class="blog-subtitle">Segredos, delicadezas e o passo a passo para cuidar de suas flores</div>
+        </div>
+
+        <p>Seja muito bem-vinda ao nosso diário floral. Cuidar de flores é uma das artes mais puras e românticas que existem; um verdadeiro ritual que acalma a alma e embeleza a vida. Para que seus botões continuem radiantes por muito mais tempo, preparamos este guia exclusivo repleto de afeto e técnica.</p>
+
+        <div class="lace-separator"></div>
+
+        <h2 class="section-title">O Ritual do Cuidado em 4 Passos</h2>
+
+        <div class="step-card">
+            <span class="step-badge">Passo 1</span>
+            <h3 class="step-title">A Higiene do Vaso e Água Pura</h3>
+            <p>A vida das suas flores começa na escolha e na limpeza do vaso. Bactérias são as maiores vilãs do murchamento precoce. Lave o recipiente com zelo e adicione água fresca. Dica de ouro: se tiver conservante floral, misture-o delicadamente para alimentar as hastes desde o primeiro minuto.</p>
+        </div>
+
+        <div class="step-card">
+            <span class="step-badge">Passo 2</span>
+            <h3 class="step-title">O Nobre Corte Angulado</h3>
+            <p>Nunca insira suas flores no vaso sem antes renovar o corte. Utilizando uma lâmina afiada (para não esmagar os canais de absorção), faça um corte em 45 graus na base do caule. Isso impede que ele fique selado contra o fundo do vaso e aumenta a superfície que puxa a água.</p>
+        </div>
+
+        <div class="step-card">
+            <span class="step-badge">Passo 3</span>
+            <h3 class="step-title">Retirada das Folhas Extras</h3>
+            <p>Remova carinhosamente todas as folhas baixas. Nenhuma folha deve ficar submersa na água do vaso, pois elas apodrecem rapidamente, gerando o acúmulo de bactérias que contaminam a água e encurtam a vida dos botões.</p>
+        </div>
+
+        <div class="step-card">
+            <span class="step-badge">Passo 4</span>
+            <h3 class="step-title">O Aposento Ideal</h3>
+            <p>Flores adoram luz, mas detestam o castigo do sol direto ou o vento forte de ares-condicionados. Coloque seu arranjo em um espaço fresco, iluminado e protegido de fontes intensas de calor para que elas fiquem lindas por dias a fio.</p>
+        </div>
+
+        <div class="lace-separator"></div>
+
+        <div class="blog-footer">
+            <p style="text-align: center; text-indent: 0;">Escrito com carinho por uma apaixonada por botões • O Jardim Secreto Blog © 2026</p>
+            <div class="rococo-ornament" style="font-size: 16px; margin: 5px 0 0 0;">⚜</div>
+        </div>
+    </div>
+
+</body>
 </html>
