@@ -237,42 +237,18 @@
     </button>
 </div>
 </body>
-</html><!-- Artigo no estilo Vintage Rococó -->
-<article class="post-card">
-  <span class="post-date">𝕬𝖓𝖔 𝖉𝖊 2026 • 19 𝖉𝖊 𝕬𝖌𝖔𝖘𝖙𝖔</span>
-  <h2 class="post-title">A Riqueza Oculta das Florestas Antigas</h2>
-  <div class="divider">✦ ⚜ ✦</div>
-  
-  <div class="post-content">
-    <p>
-      Nas profundezas das matas preservadas reside um ecossistema secular que sustenta a vida na Terra. 
-      As árvores frondosas não apenas purificam o nosso ar, mas formam redes subterrâneas complexas de nutrientes.
-    </p>
-  </div>
+</html>
+function alternarReacao(botao) {
+  const contador = botao.querySelector('.count');
+  let valorAtual = parseInt(contador.innerText);
 
-  <!-- Botões de Reação -->
-  <div class="reactions-section">
-    <div class="reactions-title">✿ Deixe a sua Apreciação ✿</div>
-    <div class="reactions-container">
-      
-      <button class="btn-reaction" onclick="alternarReacao(this)">
-        <span class="icon">👍</span>
-        <span class="label">Gostei</span>
-        <span class="count">12</span>
-      </button>
-
-      <button class="btn-reaction" onclick="alternarReacao(this)">
-        <span class="icon">💚</span>
-        <span class="label">Amei</span>
-        <span class="count">25</span>
-      </button>
-
-      <button class="btn-reaction" onclick="alternarReacao(this)">
-        <span class="icon">🌿</span>
-        <span class="label">Inspirador</span>
-        <span class="count">8</span>
-      </button>
-
-    </div>
-  </div>
-</article>
+  if (botao.classList.contains('active')) {
+    // Se já estava ativado, remove a reação e diminui o número
+    botao.classList.remove('active');
+    contador.innerText = valorAtual - 1;
+  } else {
+    // Se não estava ativado, adiciona a reação e aumenta o número
+    botao.classList.add('active');
+    contador.innerText = valorAtual + 1;
+  }
+}s
