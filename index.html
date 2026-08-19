@@ -238,17 +238,6 @@
 </div>
 </body>
 </html>
-function alternarReacao(botao) {
-  const contador = botao.querySelector('.count');
-  let valorAtual = parseInt(contador.innerText);
 
-  if (botao.classList.contains('active')) {
-    // Se já estava ativado, remove a reação e diminui o número
-    botao.classList.remove('active');
-    contador.innerText = valorAtual - 1;
-  } else {
-    // Se não estava ativado, adiciona a reação e aumenta o número
-    botao.classList.add('active');
-    contador.innerText = valorAtual + 1;
-  }
-}
+
+  
